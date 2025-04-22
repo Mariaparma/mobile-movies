@@ -5,22 +5,22 @@ import { filmesPopulares, filmesAvaliados } from '../data/filmes.js';
 export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header */}
+     
       <View style={styles.header}>
         <Text style={styles.headerTitulo}>🎥 Catálogo de Filmes 🎬</Text>
       </View>
 
-      {/* Linha divisória */}
+     
       <View style={styles.divisor} />
 
       <ScrollView>
-        {/* Barra de Pesquisa */}
+       
         <TextInput placeholder="Buscar filme..." style={styles.input} />
 
-        {/* Seção Mais Populares */}
+        
         <Text style={styles.subtitulo}>Mais Populares</Text>
         <FlatList
-          data={filmesPopulares} // Usa os dados importados
+          data={filmesPopulares} 
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => navigation.navigate('Detalhes', { filme: item })}>
@@ -35,10 +35,10 @@ export default function HomeScreen({ navigation }) {
           contentContainerStyle={{ paddingHorizontal: 10 }}
         />
 
-        {/* Seção Mais Avaliados */}
+      
         <Text style={styles.subtitulo}>Mais Avaliados</Text>
         <FlatList
-          data={filmesAvaliados} // Usa os dados importados
+          data={filmesAvaliados} 
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => navigation.navigate('Detalhes', { filme: item })}>
@@ -48,20 +48,20 @@ export default function HomeScreen({ navigation }) {
               </View>
             </TouchableOpacity>
           )}
-          numColumns={2} // Exibe 2 cards por linha
-          contentContainerStyle={styles.flatListAvaliados} // Centraliza os itens
+          numColumns={2} 
+          contentContainerStyle={styles.flatListAvaliados}
         />
 
-        {/* Botão para Avaliações */}
+       
         <TouchableOpacity 
           style={styles.botao} 
-          onPress={() => navigation.navigate('Avaliacao')} // Navega para a página Avaliacao
+          onPress={() => navigation.navigate('Avaliacao')} 
         >
           <Text style={styles.botaoTexto}>Ir para Avaliações</Text>
         </TouchableOpacity>
       </ScrollView>
 
-      {/* Footer */}
+     
       <View style={styles.footer}>
         <Text style={styles.footerTexto}>© 2025 Catálogo de Filmes. Todos os direitos reservados.</Text>
       </View>
@@ -109,23 +109,23 @@ const styles = StyleSheet.create({
     fontFamily: 'Courier',
   },
   card: {
-    width: 180, // Largura fixa para os cards
-    height: 220, // Altura fixa para os cards
+    width: 180, 
+    height: 220,
     margin: 10,
     padding: 10,
-    backgroundColor: '#ffc0cb', // Rosa claro para os cards
+    backgroundColor: '#ffc0cb', 
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
   },
   flatListAvaliados: {
-    justifyContent: 'center', // Centraliza os cards horizontalmente
-    alignItems: 'center', // Centraliza os cards verticalmente
-    paddingHorizontal: 10, // Espaçamento horizontal
+    justifyContent: 'center',
+    alignItems: 'center', 
+    paddingHorizontal: 10, 
   },
   imagem: {
-    width: '100%', // Faz a imagem ocupar toda a largura do card
-    height: 150, // Altura fixa para as imagens
+    width: '100%', 
+    height: 150, 
     borderRadius: 5,
   },
   cardTitulo: {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#c71585', // Rosa escuro para os títulos dos cards
+    color: '#c71585',
     fontFamily: 'Courier',
   },
   botao: {

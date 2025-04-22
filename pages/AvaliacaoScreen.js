@@ -15,7 +15,7 @@ export default function AvaliacaoScreen() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Avaliações</Text>
       <FlatList
-        data={filmesAvaliados} // Usa os dados importados do arquivo filmes.js
+        data={filmesAvaliados} 
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         contentContainerStyle={styles.lista}
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#ffe4e1', // Fundo rosa claro
+    backgroundColor: '#ffe4e1', 
   },
   header: {
     fontSize: 24,
@@ -36,13 +36,13 @@ const styles = StyleSheet.create({
     color: '#c71585', // Rosa escuro
     marginBottom: 20,
     textAlign: 'center',
-    fontFamily: 'Courier', // Fonte de máquina de escrever
+    fontFamily: 'Courier', 
   },
   lista: {
     paddingBottom: 20,
   },
   card: {
-    backgroundColor: '#ffc0cb', // Rosa claro para os cards
+    backgroundColor: '#ffc0cb', 
     padding: 15,
     marginBottom: 10,
     borderRadius: 5,
@@ -57,20 +57,20 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#c71585', // Rosa escuro
+    color: '#c71585', 
     marginBottom: 5,
-    fontFamily: 'Courier', // Fonte de máquina de escrever
+    fontFamily: 'Courier', 
   },
   texto: {
     fontSize: 14,
     color: '#333',
     marginBottom: 5,
-    fontFamily: 'Courier', // Fonte de máquina de escrever
+    fontFamily: 'Courier', 
     textAlign: 'center',
   },
   estrelas: {
     fontSize: 16,
-    color: '#ff69b4', // Rosa vibrante para as estrelas
-    fontFamily: 'Courier', // Fonte de máquina de escrever
+    color: '#ff69b4', 
+    fontFamily: 'Courier', 
   },
 });

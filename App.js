@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './pages/HomeScreen.js'; 
-import AvaliacaoScreen from './pages/AvaliacaoScreen.js'; // Corrigido o nome do componente
+import AvaliacaoScreen from './pages/AvaliacaoScreen.js'; 
 
 const Stack = createNativeStackNavigator();
 
